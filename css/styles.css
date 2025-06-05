@@ -550,7 +550,7 @@ letter-spacing: 0.48px;
     flex-wrap: nowrap;
   }
 
-} */
+} 
 /*----- Our Portfoli ------*/
 .portfolio {
   text-align: center;
@@ -1092,5 +1092,206 @@ align-items: center;
 
   .chekbox-link {
     margin-left: 29px; 
+  }
+}
+
+
+/*--------MENU------------*/
+
+/* .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 999;
+  overflow-y: auto;
+  padding: 40px 20px;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu.is-open {
+  transform: translateX(0%);
+}
+
+.menu.is-hidden {
+  display: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+}
+
+.menu-nav-list,
+.menu-social-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.menu-nav-link {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e2f42;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.menu-tel {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4d5ae5;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.menu-mail {
+  font-size: 16px;
+  color: #434455;
+  display: block;
+}
+
+.menu-social-link {
+  margin-right: 10px;
+} */
+/* === Основне меню (мобільне) === */
+/* ----- Мобільне меню ----- */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 768px;
+  background-color: var(--main-background-color);
+  z-index: 999;
+  padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: transform 250ms ease-in-out;
+}
+
+.menu.is-hidden {
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ----- Кнопка закриття (як у модалці) ----- */
+.menu-toggle {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--svg-border-color);
+  border-radius: 50%;
+  background-color: var(--modal-icon-close-bg);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: var(--accent-text-color);
+}
+
+.menu-toggle-icon {
+  fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-toggle:hover .menu-toggle-icon,
+.menu-toggle:focus .menu-toggle-icon {
+  fill: var(--hero-title-color);
+}
+
+/* ----- Навігаційний список ----- */
+.menu-nav-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-nav-link {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: var(--ocean);
+  text-decoration: none;
+}
+
+/* ----- Контакти ----- */
+.menu-list-contacts {
+  margin-top: 168px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-tel,
+.menu-mail {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: var(--iris);
+  text-decoration: none;
+}
+
+/* ----- Соціальні іконки (як у team) ----- */
+ 
+.menu-social-list {
+  margin-top: 8px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-social-link {
+  background-color: var(--pasive-button-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-social-icon {
+  fill: var(--main-background-color);
+}
+
+.menu-social-link:hover,
+.menu-social-link:focus {
+  background-color: var(--icon-social-hvfc);
+}
+
+
+/* ----- Адаптивність: меню зникає після 768px ----- */
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none !important;
   }
 }

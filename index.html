@@ -53,11 +53,12 @@
             >
           </li>
         </ul>
-        <botton class="open-menu-btn">
+
+        <button class="open-menu-btn" type="button" data-menu-open>
           <svg class="menu-open-icon" width="24" height="24">
-            <use href="./images/icons.svg#icon-close-black"></use>
+            <use href="./images/icons.svg#icon-Group-1"></use>
           </svg>
-        </botton>
+        </button>
       </div>
     </header>
 
@@ -68,9 +69,7 @@
             Effective Solutions<br />
             for Your Business
           </h1>
-          <button class="hero-btn" type="button" data-modal-open>
-            Order Service
-          </button>
+          <button class="hero-btn" data-modal-open>Order Service</button>
         </div>
       </section>
     </main>
@@ -592,7 +591,125 @@
         </form>
       </div>
     </div>
+    <div class="menu is-hidden" data-menu>
+      <div class="menu-container">
+        <button class="menu-toggle" type="button" data-menu-close>
+          <svg class="menu-toggle-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <ul class="menu-nav-list">
+          <li class="menu-nav-item">
+            <a href="#" class="menu-nav-link">Studio</a>
+          </li>
+          <li class="menu-nav-item">
+            <a href="#" class="menu-nav-link">Portfolio</a>
+          </li>
+          <li class="menu__nav-item">
+            <a href="#" class="menu-nav-link">Contacts</a>
+          </li>
+        </ul>
+        <div class="menu-list-contacts">
+          <a href="tel:+11(000)111-11-11" class="menu-tel"
+            >+11 (000) 111-11-11</a
+          >
+          <a href="mailto:info@devstudio.com" class="menu-mail"
+            >info@devstudio.com</a
+          >
+        </div>
+        <ul class="menu-social-list">
+          <li class="menu-social-item">
+            <a href="#" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="#" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="#" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="#" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div class="menu">
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="menu-toggle-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="menu-nav-list">
+          <li class="menu-nav-item">
+            <a href="./index.html" class="menu-nav-link">Studio</a>
+          </li>
+          <li class="menu-nav-item">
+            <a href="./portfolio.html" class="menu-nav-link">Portfolio</a>
+          </li>
+          <li class="menu__nav-item">
+            <a href="" class="menu-nav-link">Contacts</a>
+          </li>
+        </ul>
+        <div class="menu-list-contacts">
+          <a href="tel:+11(000)111-11-11" class="menu-tel menu-tel"
+            >+11 (000) 111-11-11</a
+          >
+          <a href="mailto:info@devstudio.com" class="menu-mail"
+            >info@devstudio.com</a
+          >
+        </div>
+        <ul class="menu-social-list">
+          <li class="menu-social-item">
+            <a href="" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-social-item">
+            <a href="" class="menu-social-link">
+              <svg class="menu-icon" width="40px" height="40px">
+                <use href="./images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div> -->
 
     <script src="./js/modal.js" defer></script>
+    <script src="./js/modal-menu.js" defer></script>
   </body>
 </html>
