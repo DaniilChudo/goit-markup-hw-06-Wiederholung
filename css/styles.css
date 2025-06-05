@@ -122,7 +122,6 @@ img {
 }
 
 .nav-item-link {
-  padding: 24px 0 24px 0;
   position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -151,18 +150,20 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link-tel:hover,
+ .link-tel:hover,
 .link-mail:hover,
 .link-tel:focus,
 .link-mail:focus {
   color: var(--active-button-color);
+} 
+.current { 
+  padding-bottom: 18.5px;
 }
-
 .contacts-list {
   display: none;
 }
 
-.nav-item-link::after {
+ .nav-item-link.current::after {
   position: absolute;
   display: inline-block;
   content: "";
@@ -171,8 +172,9 @@ img {
   background: var(--active-button-color);
   border-radius: 2px;
   left: 0;
-  bottom: -3.5px;
-}
+  bottom: -1px;
+} 
+
 
 .open-menu-btn {
   display: flex;
@@ -220,6 +222,38 @@ letter-spacing: 0.48px;
   .open-menu-btn {
     display: none;
   }
+}  
+
+@media screen and (min-width: 1158px) {
+  .header-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  
+  .nav {
+    gap: 76px;
+    margin-right: 332px;
+  }
+  
+  .contacts-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; 
+    
+  }
+
+  .link-tel,
+  .link-mail {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.32px;
+    color: var(--main-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
 }
 /* ----- Main ------
 
